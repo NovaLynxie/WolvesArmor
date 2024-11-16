@@ -23,15 +23,15 @@ public class EventHandlers {
             // Check if wolf is owned by player, but first check if wolf owner uuid is not null.
             if (wolf.getOwnerUUID() != null) {
                 if (wolf.getOwnerUUID().equals(player.getUUID())) {
+                    WolfArmorPlus.LOGGER.debug("Detected wolf owner interaction!");
                     WolfArmorAccessor wolfComponent = WolfArmorPlus.getAccessor(wolf);
-                    WolfArmorPlus.LOGGER.debug("Player owns wolf!");
                     // check if the wolf has armor equipped or if player has armor item in hand
-                    if (wolfComponent.getArmorItemStack().isEmpty() && player.getMainHandItem().getItem() instanceof WolfArmorItem) {
+                    if (wolfComponent.getWolfArmor().isEmpty() && player.getMainHandItem().getItem() instanceof WolfArmorItem) {
                         if (!worldLevel.isClientSide) {
                             // ...
                         }
                     } else
-                    if (!wolfComponent.getArmorItemStack().isEmpty() && (player.getMainHandItem().isEmpty() && player.isCrouching())) {
+                    if (!wolfComponent.getWolfArmor().isEmpty() && (player.getMainHandItem().isEmpty() && player.isCrouching())) {
                         if (!worldLevel.isClientSide) {
                             // ...
                         }
