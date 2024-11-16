@@ -2,14 +2,15 @@ package com.owoentertainment.wolfarmorplus;
 
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+
+import com.owoentertainment.wolfarmorplus.api.WolfArmorAccessor;
+import com.owoentertainment.wolfarmorplus.item.WolfArmorItem;
+
 import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.Level; // replaces import.net.minecraft.world.World ?
-//import net.minecraft.entity.passive.WolfEntity; // missing or no longer exists in newer builds
-//import net.minecraft.entity.player.PlayerEntity; // missing or no longer exists in newer builds
-//import net.minecraft.world.World; // missing or no longer exists in newer builds
+import net.minecraft.world.level.Level; 
 
-public class EventHandler {
+public class EventHandlers {
     @SubscribeEvent
     public void interactWolf(PlayerInteractEvent.EntityInteractSpecific event) {
         // Get required information from the interact event
@@ -22,13 +23,21 @@ public class EventHandler {
             // Check if wolf is owned by player, but first check if wolf owner uuid is not null.
             if (wolf.getOwnerUUID() != null) {
                 if (wolf.getOwnerUUID().equals(player.getUUID())) {
-                    // TODO: Implement WolfArmorAccessor API
+                    //WolfArmorAccessor wolfComponent = WolfArmorPlus.getAccessor();
                     WolfArmorPlus.LOGGER.debug("Player owns wolf!");
                     // check if the wolf has armor equipped or if player has armor item in hand
-                    //if (wolfComponent.getArmor().isEmpty() && player.getMainHandItem().getItem() instanceof WolfArmorItem) {}
-                    if (!worldLevel.isClientSide) {
-                        // ...
+                    /* 
+                    if (wolfComponent.getArmorItemStack().isEmpty() && player.getMainHandItem().getItem() instanceof WolfArmorItem) {
+                        if (!worldLevel.isClientSide) {
+                            // ...
+                        }
+                    } else
+                    if (!wolfComponent.getArmorItemStack().isEmpty() && (player.getMainHandItem().isEmpty() && player.isCrouching())) {
+                        if (!worldLevel.isClientSide) {
+                            // ...
+                        }
                     }
+                    */
                 }
             }
         }
