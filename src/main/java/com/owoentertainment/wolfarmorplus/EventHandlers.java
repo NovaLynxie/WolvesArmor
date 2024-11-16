@@ -24,6 +24,8 @@ public class EventHandlers {
             if (wolf.getOwnerUUID() != null) {
                 if (wolf.getOwnerUUID().equals(player.getUUID())) {
                     WolfArmorPlus.LOGGER.debug("Detected wolf owner interaction!");
+                    // TODO: Implement Wolf armor accessor methor and relevant inventories!
+                    /*
                     WolfArmorAccessor wolfComponent = WolfArmorPlus.getAccessor(wolf);
                     // check if the wolf has armor equipped or if player has armor item in hand
                     if (wolfComponent.getWolfArmor().isEmpty() && player.getMainHandItem().getItem() instanceof WolfArmorItem) {
@@ -36,6 +38,7 @@ public class EventHandlers {
                             // ...
                         }
                     }
+                    */
                 }
             }
         }
