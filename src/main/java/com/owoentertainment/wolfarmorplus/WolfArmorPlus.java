@@ -3,12 +3,10 @@ package com.owoentertainment.wolfarmorplus;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
-import com.owoentertainment.wolfarmorplus.api.WolfArmorAccessor;
 import com.owoentertainment.wolfarmorplus.registries.ModCreativeTabs;
 import com.owoentertainment.wolfarmorplus.registries.ModItems;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.animal.Wolf;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -26,9 +24,6 @@ public class WolfArmorPlus {
         ModCreativeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         NeoForge.EVENT_BUS.register(new EventHandlers());
-    }
-    public static WolfArmorAccessor getAccessor(Wolf wolf) {
-        return ((WolfArmorAccessor) wolf);
     }
     public static ResourceLocation resourceId(String name) {
         return ResourceLocation.fromNamespaceAndPath(WolfArmorPlus.MODID, name);

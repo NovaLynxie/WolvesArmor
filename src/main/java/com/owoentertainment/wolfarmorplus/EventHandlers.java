@@ -3,9 +3,6 @@ package com.owoentertainment.wolfarmorplus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
-import com.owoentertainment.wolfarmorplus.api.WolfArmorAccessor;
-import com.owoentertainment.wolfarmorplus.item.WolfArmorItem;
-
 import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level; 
