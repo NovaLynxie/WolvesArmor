@@ -4,6 +4,8 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 import com.owoentertainment.wolfarmorplus.api.WolfArmorAccessor;
+import com.owoentertainment.wolfarmorplus.registries.ModCreativeTabs;
+import com.owoentertainment.wolfarmorplus.registries.ModItems;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.Wolf;
@@ -12,24 +14,23 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 
-@Mod(WolfArmorPlus.MOD_ID)
+@Mod(WolfArmorPlus.MODID)
 public class WolfArmorPlus {
     // Define mod id to be used globally throughout the code.
-    public static final String MOD_ID = "wolfarmorplus";
+    public static final String MODID = "wolfarmorplus";
     // Define mod logger to be used globally throughout the code.
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    // Create Deferred Registers
-
     // Main constructor for mod class, this is first run when mod is loaded.
     public WolfArmorPlus(IEventBus modEventBus, ModContainer modContainer) {
-        // Register mod events here.
+        ModCreativeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
         NeoForge.EVENT_BUS.register(new EventHandlers());
     }
     public static WolfArmorAccessor getAccessor(Wolf wolf) {
         return ((WolfArmorAccessor) wolf);
     }
     public static ResourceLocation resourceId(String name) {
-        return ResourceLocation.fromNamespaceAndPath(WolfArmorPlus.MOD_ID, name);
+        return ResourceLocation.fromNamespaceAndPath(WolfArmorPlus.MODID, name);
     }
 }
