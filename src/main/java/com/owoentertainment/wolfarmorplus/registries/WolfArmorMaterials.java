@@ -19,7 +19,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 
-public class ModArmorMaterials {
+public class WolfArmorMaterials {
     public static final Holder<ArmorMaterial> BONE = register("bone",
         Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
             attribute.put(ArmorItem.Type.BODY, 11);
