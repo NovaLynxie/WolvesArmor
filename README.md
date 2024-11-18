@@ -1,4 +1,6 @@
-# MOD_NAME_HERE (WIP!)
+# Wolf Armor Plus (WIP!)
+
+
 
 Please **DO NOT** clone any code from this repository without contacting me first and obtaining permission from myself.
 
