@@ -22,18 +22,18 @@ import net.minecraft.world.item.Item;
 public class WolfArmorMaterials {
     public static final Holder<ArmorMaterial> BONE = register("bone",
         Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-            attribute.put(ArmorItem.Type.BODY, 11);
-        }), 16, 2f, 0.1f, () -> Items.BONE
+            attribute.put(ArmorItem.Type.BODY, 2);
+        }), 2, 0f, 0.0f, () -> Items.BONE
     );
     public static final Holder<ArmorMaterial> COPPER = register("copper",
         Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-            attribute.put(ArmorItem.Type.BODY, 11);
-        }), 16, 2f, 0.1f, () -> Items.COPPER_INGOT
+            attribute.put(ArmorItem.Type.BODY, 4);
+        }), 4, 0f, 0.0f, () -> Items.COPPER_INGOT
     );
     public static final Holder<ArmorMaterial> MOSS = register("moss",
         Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-            attribute.put(ArmorItem.Type.BODY, 11);
-        }), 16, 2f, 0.1f, () -> Items.MOSS_BLOCK
+            attribute.put(ArmorItem.Type.BODY, 0);
+        }), 1, 0f, 0.0f, () -> Items.MOSS_BLOCK
     );
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection, int enchantability, float toughness, float knockbackResistance, Supplier<Item> ingredientItem) {
