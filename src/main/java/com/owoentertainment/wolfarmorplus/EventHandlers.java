@@ -3,9 +3,20 @@ package com.owoentertainment.wolfarmorplus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
+import java.util.function.Consumer;
+
+import net.minecraft.client.resources.sounds.Sound;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.Level; 
+import net.minecraft.world.item.AnimalArmorItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ShearsItem;
+import net.minecraft.world.level.Level;
 
 public class EventHandlers {
     @SubscribeEvent
@@ -21,21 +32,27 @@ public class EventHandlers {
             if (wolf.getOwnerUUID() != null) {
                 if (wolf.getOwnerUUID().equals(player.getUUID())) {
                     WolfArmorPlus.LOGGER.debug("Detected wolf owner interaction!");
-                    // TODO: Implement Wolf armor accessor methor and relevant inventories!
-                    /*
-                    WolfArmorAccessor wolfComponent = WolfArmorPlus.getAccessor(wolf);
+                    // TODO: Implement Wolf Armor Inventory
+                    wolf.stopInPlace();
+                    if (wolf.isInSittingPose()) {
+                        wolf.setInSittingPose(true);
+                    }
                     // check if the wolf has armor equipped or if player has armor item in hand
-                    if (wolfComponent.getWolfArmor().isEmpty() && player.getMainHandItem().getItem() instanceof WolfArmorItem) {
+                    if (!wolf.isWearingBodyArmor() && player.getMainHandItem().getItem() instanceof AnimalArmorItem) {
+                        WolfArmorPlus.LOGGER.debug("Detected AnimalArmorItem in player's hand! Attempting to equip animal armor item.");
                         if (!worldLevel.isClientSide) {
-                            // ...
+                            wolf.setBodyArmorItem(player.getMainHandItem());
+                            if (!player.isCreative()) {
+                                player.setItemInHand(player.getUsedItemHand(), ItemStack.EMPTY);
+                            }
                         }
                     } else
-                    if (!wolfComponent.getWolfArmor().isEmpty() && (player.getMainHandItem().isEmpty() && player.isCrouching())) {
+                    if (wolf.isWearingBodyArmor() && player.getMainHandItem().getItem() instanceof ShearsItem) {
+                        WolfArmorPlus.LOGGER.debug("Detected ShearsItem in player's hand! Attempting to remove animal armor item.");
                         if (!worldLevel.isClientSide) {
-                            // ...
+                            wolf.dropPreservedEquipment();
                         }
                     }
-                    */
                 }
             }
         }
