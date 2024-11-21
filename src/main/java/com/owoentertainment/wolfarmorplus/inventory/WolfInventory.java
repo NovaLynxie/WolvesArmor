@@ -1,5 +1,7 @@
 package com.owoentertainment.wolfarmorplus.inventory;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
@@ -47,7 +49,7 @@ public class WolfInventory implements Container {
     }
 
     @Override
-    public void setItem(int pSlot, ItemStack pStack) {
+    public void setItem(int pSlot, @Nonnull ItemStack pStack) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setItem'");
     }
@@ -59,7 +61,7 @@ public class WolfInventory implements Container {
     }
 
     @Override
-    public boolean stillValid(Player pPlayer) {
+    public boolean stillValid(@Nonnull Player pPlayer) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'stillValid'");
     }
