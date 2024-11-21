@@ -41,7 +41,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.GOLD_WOLF_ARMOR.get());
         basicItem(ModItems.IRON_WOLF_ARMOR.get());
         basicItem(ModItems.LEATHER_WOLF_ARMOR.get());
-        basicItem(ModItems.MOSS_WOLF_ARMOR.get());
+        basicItem(ModItems.MOSSY_WOLF_ARMOR.get());
         basicItem(ModItems.NETHERITE_WOLF_ARMOR.get());
         basicItem(ModItems.TURTLE_WOLF_ARMOR.get());
     }

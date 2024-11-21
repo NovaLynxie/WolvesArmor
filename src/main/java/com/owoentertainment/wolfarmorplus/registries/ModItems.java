@@ -16,7 +16,7 @@ public class ModItems {
     public static final DeferredItem<Item> LEATHER_WOLF_ARMOR = ITEMS.register("leather_wolf_armor", () -> new AnimalArmorItem(
         ArmorMaterials.LEATHER, AnimalArmorItem.BodyType.CANINE, false, new Item.Properties().durability(24).stacksTo(1))
     );
-    public static final DeferredItem<Item> MOSS_WOLF_ARMOR = ITEMS.register("mossy_wolf_armor", () -> new AnimalArmorItem(
+    public static final DeferredItem<Item> MOSSY_WOLF_ARMOR = ITEMS.register("mossy_wolf_armor", () -> new AnimalArmorItem(
         WolfArmorMaterials.MOSS, AnimalArmorItem.BodyType.CANINE, false, new Item.Properties().stacksTo(1))
     );
     public static final DeferredItem<Item> BONE_WOLF_ARMOR = ITEMS.register("bone_wolf_armor", () -> new AnimalArmorItem(
