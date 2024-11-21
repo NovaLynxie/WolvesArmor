@@ -1,11 +1,9 @@
 package com.owoentertainment.wolfarmorplus.item;
 
-import net.minecraft.core.Holder;
-import net.minecraft.world.item.AnimalArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Item;
 
-public class WolfArmorItem extends AnimalArmorItem {
-    public WolfArmorItem(Holder<ArmorMaterial> material, BodyType bodyType, boolean overlay, Properties properties) {
-        super(material, bodyType, overlay, properties);
+public class WolfArmorItem extends Item {
+    public WolfArmorItem(Properties properties) {
+        super(properties);
     }
 }
