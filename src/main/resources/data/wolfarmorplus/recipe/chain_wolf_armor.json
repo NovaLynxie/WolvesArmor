@@ -2,12 +2,12 @@
     "type": "minecraft:crafting_shaped",
     "group": "wolf_armor",
     "pattern": [
-        "#  ",
-        "L#L",
-        "# #"
+        "C  ",
+        "LCL",
+        "C C"
     ],
     "key": {
-        "#": {
+        "C": {
             "item": "minecraft:chain"
         },
         "L": {

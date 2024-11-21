@@ -2,12 +2,12 @@
     "type": "minecraft:crafting_shaped",
     "group": "wolf_armor",
     "pattern": [
-        "#  ",
-        "L#L",
-        "# #"
+        "G  ",
+        "LGL",
+        "G G"
     ],
     "key": {
-        "#": {
+        "G": {
             "item": "minecraft:gold_ingot"
         },
         "L": {
