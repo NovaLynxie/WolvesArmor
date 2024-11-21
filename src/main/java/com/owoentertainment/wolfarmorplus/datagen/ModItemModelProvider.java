@@ -36,7 +36,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.BONE_WOLF_ARMOR.get());
         basicItem(ModItems.CHAIN_WOLF_ARMOR.get());
-        basicItem(ModItems.COPPER_WOLF_ARMOR.get());
+        //basicItem(ModItems.COPPER_WOLF_ARMOR.get());
         basicItem(ModItems.DIAMOND_WOLF_ARMOR.get());
         basicItem(ModItems.GOLD_WOLF_ARMOR.get());
         basicItem(ModItems.IRON_WOLF_ARMOR.get());
