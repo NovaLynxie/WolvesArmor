@@ -3,22 +3,15 @@ package com.owoentertainment.wolfarmorplus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
-import java.util.function.Consumer;
-
-import net.minecraft.client.resources.sounds.Sound;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AnimalArmorItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShearsItem;
 import net.minecraft.world.level.Level;
 
 public class EventHandlers {
+    @SuppressWarnings("null")
     @SubscribeEvent
     public void interactWolf(PlayerInteractEvent.EntityInteractSpecific event) {
         // Get required information from the interact event
