@@ -22,9 +22,9 @@ public class ModItems {
     public static final DeferredItem<Item> BONE_WOLF_ARMOR = ITEMS.register("bone_wolf_armor", () -> new AnimalArmorItem(
         WolfArmorMaterials.BONE, AnimalArmorItem.BodyType.CANINE, false, new Item.Properties().durability(32).stacksTo(1))
     );
-    public static final DeferredItem<Item> COPPER_WOLF_ARMOR = ITEMS.register("copper_wolf_armor", () -> new AnimalArmorItem(
-        WolfArmorMaterials.COPPER, AnimalArmorItem.BodyType.CANINE, false, new Item.Properties().durability(48).stacksTo(1))
-    );
+    //public static final DeferredItem<Item> COPPER_WOLF_ARMOR = ITEMS.register("copper_wolf_armor", () -> new AnimalArmorItem(
+    //    WolfArmorMaterials.COPPER, AnimalArmorItem.BodyType.CANINE, false, new Item.Properties().durability(48).stacksTo(1))
+    //);
     public static final DeferredItem<Item> TURTLE_WOLF_ARMOR = ITEMS.register("turtle_wolf_armor", () -> new AnimalArmorItem(
         ArmorMaterials.TURTLE, AnimalArmorItem.BodyType.CANINE, false, new Item.Properties().durability(128).stacksTo(1))
     );

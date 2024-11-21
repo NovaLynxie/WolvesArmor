@@ -19,7 +19,7 @@ public class ModCreativeTabs {
             output.accept(ModItems.MOSS_WOLF_ARMOR.get());
             output.accept(ModItems.TURTLE_WOLF_ARMOR.get());
             output.accept(ModItems.LEATHER_WOLF_ARMOR.get());
-            output.accept(ModItems.COPPER_WOLF_ARMOR.get());
+            //output.accept(ModItems.COPPER_WOLF_ARMOR.get());
             output.accept(ModItems.CHAIN_WOLF_ARMOR.get());
             output.accept(ModItems.IRON_WOLF_ARMOR.get());
             output.accept(ModItems.CHAIN_WOLF_ARMOR.get());

@@ -25,11 +25,11 @@ public class WolfArmorMaterials {
             attribute.put(ArmorItem.Type.BODY, 2);
         }), 2, 0f, 0.0f, () -> Items.BONE
     );
-    public static final Holder<ArmorMaterial> COPPER = register("copper",
-        Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-            attribute.put(ArmorItem.Type.BODY, 4);
-        }), 4, 0f, 0.0f, () -> Items.COPPER_INGOT
-    );
+    //public static final Holder<ArmorMaterial> COPPER = register("copper",
+    //    Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+    //        attribute.put(ArmorItem.Type.BODY, 4);
+    //    }), 4, 0f, 0.0f, () -> Items.COPPER_INGOT
+    //);
     public static final Holder<ArmorMaterial> MOSS = register("moss",
         Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
             attribute.put(ArmorItem.Type.BODY, 0);
