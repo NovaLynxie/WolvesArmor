@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "wolf_armor",
+    "pattern": [
+        "L  ",
+        "LLL",
+        "L L"
+    ],
+    "key": {
+        "L": {
+            "item": "minecraft:leather"
+        }
+    },
+    "result": {
+        "id": "wolfarmorplus:leather_wolf_armor"
+    }
+}

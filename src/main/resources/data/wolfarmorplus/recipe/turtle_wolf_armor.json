@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "wolf_armor",
+    "pattern": [
+        "#  ",
+        "###",
+        "# #"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:turtle_scute"
+        }
+    },
+    "result": {
+        "id": "wolfarmorplus:turtle_wolf_armor"
+    }
+}
