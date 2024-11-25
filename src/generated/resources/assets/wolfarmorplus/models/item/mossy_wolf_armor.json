@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "wolfarmorplus:item/mossy_wolf_armor"
+  }
+}
