@@ -3,8 +3,8 @@ package com.owoentertainment.wolfarmorplus;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
+import com.owoentertainment.wolfarmorplus.registries.ItemRegistry;
 import com.owoentertainment.wolfarmorplus.registries.ModCreativeTabs;
-import com.owoentertainment.wolfarmorplus.registries.ModItems;
 
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
@@ -31,7 +31,7 @@ public class WolfArmorPlus {
     public WolfArmorPlus(IEventBus modEventBus, ModContainer modContainer) {
         NeoForge.EVENT_BUS.register(this);
         ModCreativeTabs.register(modEventBus);
-        ModItems.register(modEventBus);
+        ItemRegistry.register(modEventBus);
     }
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {

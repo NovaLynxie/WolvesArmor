@@ -15,17 +15,17 @@ public class ModCreativeTabs {
         .title(Component.translatable("itemGroup.wolfarmorplus"))
         .withTabsBefore(net.minecraft.world.item.CreativeModeTabs.COMBAT)
         .displayItems((parameters, output) -> {
-            output.accept(ModItems.BONE_WOLF_ARMOR);
-            output.accept(ModItems.MOSSY_WOLF_ARMOR);
-            output.accept(ModItems.TURTLE_WOLF_ARMOR);
-            output.accept(ModItems.LEATHER_WOLF_ARMOR);
-            //output.accept(ModItems.COPPER_WOLF_ARMOR);
-            output.accept(ModItems.CHAIN_WOLF_ARMOR);
-            output.accept(ModItems.IRON_WOLF_ARMOR);
-            output.accept(ModItems.CHAIN_WOLF_ARMOR);
-            output.accept(ModItems.GOLD_WOLF_ARMOR);
-            output.accept(ModItems.DIAMOND_WOLF_ARMOR);
-            output.accept(ModItems.NETHERITE_WOLF_ARMOR);
+            output.accept(ItemRegistry.BONE_WOLF_ARMOR);
+            output.accept(ItemRegistry.MOSSY_WOLF_ARMOR);
+            output.accept(ItemRegistry.TURTLE_WOLF_ARMOR);
+            output.accept(ItemRegistry.LEATHER_WOLF_ARMOR);
+            //output.accept(ItemRegistry.COPPER_WOLF_ARMOR);
+            output.accept(ItemRegistry.CHAIN_WOLF_ARMOR);
+            output.accept(ItemRegistry.IRON_WOLF_ARMOR);
+            output.accept(ItemRegistry.CHAIN_WOLF_ARMOR);
+            output.accept(ItemRegistry.GOLD_WOLF_ARMOR);
+            output.accept(ItemRegistry.DIAMOND_WOLF_ARMOR);
+            output.accept(ItemRegistry.NETHERITE_WOLF_ARMOR);
         }).build()
     );
     public static void register(IEventBus eventBus) {
