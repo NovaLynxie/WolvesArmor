@@ -25,7 +25,6 @@ public class EventHandlers {
             if (wolf.getOwnerUUID() != null) {
                 if (wolf.getOwnerUUID().equals(player.getUUID())) {
                     WolfArmorPlus.LOGGER.debug("Detected wolf owner interaction!");
-                    // TODO: Implement Wolf Armor Inventory
                     wolf.stopInPlace();
                     if (wolf.isInSittingPose()) {
                         wolf.setInSittingPose(true);
