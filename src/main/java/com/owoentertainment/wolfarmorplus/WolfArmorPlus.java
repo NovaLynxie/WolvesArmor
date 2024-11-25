@@ -7,6 +7,12 @@ import com.owoentertainment.wolfarmorplus.registries.ItemRegistry;
 import com.owoentertainment.wolfarmorplus.registries.ModCreativeTabs;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.animal.Wolf;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.AnimalArmorItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ShearsItem;
+import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -15,6 +21,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 @Mod(WolfArmorPlus.MODID)
@@ -36,6 +43,40 @@ public class WolfArmorPlus {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("Dusting off the wolf armors. Protecting your trusty canine companions!");
+    }
+    // Wolf interaction event.
+    @SuppressWarnings("null")
+    @SubscribeEvent
+    public void interactWolf(PlayerInteractEvent.EntityInteractSpecific event) {
+        // Get required information from the interact event
+        Player player = event.getEntity(); // get player entity data
+        Level worldLevel = event.getLevel(); // get world level data
+        // Check if entity interacted with is a wolf entity.
+        if (event.getTarget() instanceof Wolf) {
+            // if true, get wolf entity data
+            Wolf wolf = (Wolf) event.getTarget();
+            if (wolf.isOwnedBy(player)) {
+                WolfArmorPlus.LOGGER.debug("Detected wolf owner interaction!");
+                // check if the wolf has armor equipped or if player has armor item in hand
+                if (!wolf.isWearingBodyArmor() && player.getMainHandItem().getItem() instanceof AnimalArmorItem) {
+                    WolfArmorPlus.LOGGER.debug("Detected AnimalArmorItem in player's hand! Attempting to equip animal armor item.");
+                    if (!worldLevel.isClientSide) {
+                        if (!wolf.isInSittingPose()) wolf.setOrderedToSit(true);
+                        wolf.setBodyArmorItem(player.getMainHandItem());
+                        if (!player.isCreative()) {
+                            player.setItemInHand(player.getUsedItemHand(), ItemStack.EMPTY);
+                        }
+                    }
+                } else
+                if (wolf.isWearingBodyArmor() && player.getMainHandItem().getItem() instanceof ShearsItem) {
+                    WolfArmorPlus.LOGGER.debug("Detected ShearsItem in player's hand! Attempting to remove animal armor item.");
+                    if (!worldLevel.isClientSide) {
+                        if (!wolf.isInSittingPose()) wolf.setOrderedToSit(true);
+                        wolf.dropPreservedEquipment();
+                    }
+                }
+            }
+        }
     }
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
