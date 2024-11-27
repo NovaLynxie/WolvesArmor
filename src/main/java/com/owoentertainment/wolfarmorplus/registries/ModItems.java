@@ -9,7 +9,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class ItemRegistry {
+public class ModItems {
     // Create item registry for items under mod_id namespace
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WolfArmorPlus.MODID);
     // Register our armor items here
