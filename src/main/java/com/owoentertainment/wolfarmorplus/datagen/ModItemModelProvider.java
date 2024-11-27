@@ -3,7 +3,7 @@ package com.owoentertainment.wolfarmorplus.datagen;
 import java.util.LinkedHashMap;
 
 import com.owoentertainment.wolfarmorplus.WolfArmorPlus;
-import com.owoentertainment.wolfarmorplus.registries.ItemRegistry;
+import com.owoentertainment.wolfarmorplus.registries.ModItems;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -31,15 +31,15 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
     @Override
     protected void registerModels() {
-        basicItem(ItemRegistry.BONE_WOLF_ARMOR.get());
-        basicItem(ItemRegistry.CHAIN_WOLF_ARMOR.get());
+        basicItem(ModItems.BONE_WOLF_ARMOR.get());
+        basicItem(ModItems.CHAIN_WOLF_ARMOR.get());
         //basicItem(ItemRegistry.COPPER_WOLF_ARMOR.get());
-        basicItem(ItemRegistry.DIAMOND_WOLF_ARMOR.get());
-        basicItem(ItemRegistry.GOLD_WOLF_ARMOR.get());
-        basicItem(ItemRegistry.IRON_WOLF_ARMOR.get());
-        basicItem(ItemRegistry.LEATHER_WOLF_ARMOR.get());
-        basicItem(ItemRegistry.MOSSY_WOLF_ARMOR.get());
-        basicItem(ItemRegistry.NETHERITE_WOLF_ARMOR.get());
-        basicItem(ItemRegistry.TURTLE_WOLF_ARMOR.get());
+        basicItem(ModItems.DIAMOND_WOLF_ARMOR.get());
+        basicItem(ModItems.GOLD_WOLF_ARMOR.get());
+        basicItem(ModItems.IRON_WOLF_ARMOR.get());
+        basicItem(ModItems.LEATHER_WOLF_ARMOR.get());
+        basicItem(ModItems.MOSSY_WOLF_ARMOR.get());
+        basicItem(ModItems.NETHERITE_WOLF_ARMOR.get());
+        basicItem(ModItems.TURTLE_WOLF_ARMOR.get());
     }
 }
