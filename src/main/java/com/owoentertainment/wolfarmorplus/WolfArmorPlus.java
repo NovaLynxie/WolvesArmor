@@ -7,12 +7,6 @@ import com.owoentertainment.wolfarmorplus.registries.ModItems;
 import com.owoentertainment.wolfarmorplus.registries.ModCreativeTabs;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.animal.Wolf;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.AnimalArmorItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
