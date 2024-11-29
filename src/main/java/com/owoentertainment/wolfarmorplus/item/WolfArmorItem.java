@@ -11,7 +11,7 @@ public class WolfArmorItem extends AnimalArmorItem {
     private final ResourceLocation textureLocation;
 
     public WolfArmorItem(Holder<ArmorMaterial> armorMaterial, Properties properties) {
-        super(armorMaterial, AnimalArmorItem.BodyType.CANINE, true, properties);
+        super(armorMaterial, BodyType.CANINE, true, properties);
         String materialHolderName = armorMaterial.getRegisteredName();
         ResourceLocation resourceLocation = getArmorTexture(materialHolderName.substring(materialHolderName.lastIndexOf(":") + 1));
         WolfArmorPlus.LOGGER.debug(resourceLocation.toString());
