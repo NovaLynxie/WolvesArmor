@@ -1,0 +1,13 @@
+{
+    "required": true,
+    "package": "com.owoentertainment.wolfarmorplus.mixin",
+    "compatibilityLevel": "JAVA_21",
+    "minVersion": "0.8",
+    "refmap": "owoentertainment.refmap.json",
+    "mixins": [
+        "WolfMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
