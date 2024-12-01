@@ -47,8 +47,8 @@ public class ModItems {
     public static final DeferredItem<Item> NETHERITE_WOLF_ARMOR = ITEMS.register("netherite_wolf_armor", () -> new WolfArmorItem(
         ArmorMaterials.NETHERITE, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(8)).stacksTo(1).fireResistant())
     );
+    */
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-    */
 }
