@@ -14,17 +14,17 @@ public class ModItems {
     // Create item registry for items under mod_id namespace
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WolfArmorPlus.MODID);
     // Register our armor items here
-    public static final DeferredItem<Item> MOSSY_WOLF_ARMOR = ITEMS.register("mossy_wolf_armor", () -> new WolfArmorItem(
-        WolfArmorMaterials.MOSS, new Item.Properties().stacksTo(1))
-    );
     public static final DeferredItem<Item> BONE_WOLF_ARMOR = ITEMS.register("bone_wolf_armor", () -> new WolfArmorItem(
         WolfArmorMaterials.BONE, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(2)).stacksTo(1))
     );
+    public static final DeferredItem<Item> CHAIN_WOLF_ARMOR = ITEMS.register("chain_wolf_armor", () -> new WolfArmorItem(
+        ArmorMaterials.CHAIN, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(3)).stacksTo(1))
+    );
+    public static final DeferredItem<Item> MOSSY_WOLF_ARMOR = ITEMS.register("mossy_wolf_armor", () -> new WolfArmorItem(
+        WolfArmorMaterials.MOSS, new Item.Properties().stacksTo(1))
+    );
     public static final DeferredItem<Item> TURTLE_WOLF_ARMOR = ITEMS.register("turtle_wolf_armor", () -> new WolfArmorItem(
         ArmorMaterials.TURTLE, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(8)).stacksTo(1))
-    );
-    public static final DeferredItem<Item> CHAIN_WOLF_ARMOR = ITEMS.register("chain_wolf_armor", () -> new WolfArmorItem(
-        ArmorMaterials.CHAIN, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(6)).stacksTo(1))
     );
     /*
     // copper wolf armor
