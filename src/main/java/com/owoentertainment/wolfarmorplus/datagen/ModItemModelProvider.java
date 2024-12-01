@@ -33,13 +33,13 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.BONE_WOLF_ARMOR.get());
         basicItem(ModItems.CHAIN_WOLF_ARMOR.get());
-        //basicItem(ItemRegistry.COPPER_WOLF_ARMOR.get());
-        basicItem(ModItems.DIAMOND_WOLF_ARMOR.get());
-        basicItem(ModItems.GOLD_WOLF_ARMOR.get());
-        basicItem(ModItems.IRON_WOLF_ARMOR.get());
-        basicItem(ModItems.LEATHER_WOLF_ARMOR.get());
         basicItem(ModItems.MOSSY_WOLF_ARMOR.get());
-        basicItem(ModItems.NETHERITE_WOLF_ARMOR.get());
         basicItem(ModItems.TURTLE_WOLF_ARMOR.get());
+        //basicItem(ItemRegistry.COPPER_WOLF_ARMOR.get());
+        //basicItem(ModItems.DIAMOND_WOLF_ARMOR.get());
+        //basicItem(ModItems.GOLD_WOLF_ARMOR.get());
+        //basicItem(ModItems.IRON_WOLF_ARMOR.get());
+        //basicItem(ModItems.LEATHER_WOLF_ARMOR.get());
+        //basicItem(ModItems.NETHERITE_WOLF_ARMOR.get());
     }
 }
