@@ -13,7 +13,11 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     // Create item registry for items under mod_id namespace
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WolfArmorPlus.MODID);
-    // Register our armor items here
+    
+    // Custom mod items
+    public static final DeferredItem<Item> UPGRADE_BLUEPRINT = ITEMS.registerSimpleItem("upgrade_blueprint");
+    
+    // Custom wolf armors
     public static final DeferredItem<Item> BONE_WOLF_ARMOR = ITEMS.register("bone_wolf_armor", () -> new WolfArmorItem(
         WolfArmorMaterials.BONE, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(2)).stacksTo(1))
     );
