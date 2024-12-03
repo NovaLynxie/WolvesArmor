@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "wolfarmorplus:item/bone_wolf_armor"
-  }
-}
