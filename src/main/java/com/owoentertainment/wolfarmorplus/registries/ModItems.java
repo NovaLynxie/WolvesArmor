@@ -52,7 +52,7 @@ public class ModItems {
         ArmorMaterials.NETHERITE, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(8)).stacksTo(1).fireResistant())
     );
     */
-    public static void register(IEventBus eventBus) {
+    public static void registerItems(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
 }

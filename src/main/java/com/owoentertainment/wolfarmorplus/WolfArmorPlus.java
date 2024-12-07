@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 import com.owoentertainment.wolfarmorplus.registries.ModItems;
+import com.owoentertainment.wolfarmorplus.registries.ModMenus;
 import com.owoentertainment.wolfarmorplus.registries.ModCreativeTabs;
 
 import net.minecraft.resources.ResourceLocation;
@@ -30,8 +31,9 @@ public class WolfArmorPlus {
     // Main constructor for mod class, this is first run when mod is loaded.
     public WolfArmorPlus(IEventBus modEventBus, ModContainer modContainer) {
         NeoForge.EVENT_BUS.register(this);
-        ModCreativeTabs.register(modEventBus);
-        ModItems.register(modEventBus);
+        ModCreativeTabs.registerCreativeTabs(modEventBus);
+        ModItems.registerItems(modEventBus);
+        ModMenus.registerMenus(modEventBus);
     }
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {

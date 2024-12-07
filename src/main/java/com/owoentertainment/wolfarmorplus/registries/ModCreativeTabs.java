@@ -28,7 +28,7 @@ public class ModCreativeTabs {
             //output.accept(ModItems.NETHERITE_WOLF_ARMOR);
         }).build()
     );
-    public static void register(IEventBus eventBus) {
+    public static void registerCreativeTabs(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }
 }
