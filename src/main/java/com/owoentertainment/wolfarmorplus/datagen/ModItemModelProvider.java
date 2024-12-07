@@ -27,7 +27,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, WolfArmorPlus.MODID, existingFileHelper);
+        super(output, WolfArmorPlus.MOD_ID, existingFileHelper);
     }
     @Override
     protected void registerModels() {
