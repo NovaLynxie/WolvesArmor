@@ -12,7 +12,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModItems {
     // Create item registry for items under mod_id namespace
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WolfArmorPlus.MODID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WolfArmorPlus.MOD_ID);
     
     // Custom mod items
     public static final DeferredItem<Item> UPGRADE_BLUEPRINT = ITEMS.registerSimpleItem("upgrade_blueprint");

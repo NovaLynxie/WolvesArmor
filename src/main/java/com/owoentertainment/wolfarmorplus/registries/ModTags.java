@@ -10,7 +10,7 @@ import net.minecraft.world.item.Item;
 public class ModTags {
     public static class Items {
         private static TagKey<Item> createTag(String name) {
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(WolfArmorPlus.MODID, name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(WolfArmorPlus.MOD_ID, name));
         }
     }
 }

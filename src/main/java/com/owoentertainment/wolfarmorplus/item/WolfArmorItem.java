@@ -24,6 +24,6 @@ public class WolfArmorItem extends AnimalArmorItem {
 
     public ResourceLocation getArmorTexture(String materialName) {
         String armorTexture = "textures/entity/wolf/wolf_armor_"+ materialName;
-        return ResourceLocation.fromNamespaceAndPath(WolfArmorPlus.MODID, armorTexture);
+        return ResourceLocation.fromNamespaceAndPath(WolfArmorPlus.MOD_ID, armorTexture);
     }
 }
