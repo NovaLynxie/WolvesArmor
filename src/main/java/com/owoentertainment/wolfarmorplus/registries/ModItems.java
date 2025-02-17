@@ -22,7 +22,7 @@ public class ModItems {
         WolfArmorMaterials.BONE, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(2)).stacksTo(1))
     );
     public static final DeferredItem<Item> CHAIN_WOLF_ARMOR = ITEMS.register("chain_wolf_armor", () -> new WolfArmorItem(
-        ArmorMaterials.CHAIN, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(3)).stacksTo(1))
+        WolfArmorMaterials.CHAIN, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(3)).stacksTo(1))
     );
     public static final DeferredItem<Item> MOSSY_WOLF_ARMOR = ITEMS.register("mossy_wolf_armor", () -> new WolfArmorItem(
         WolfArmorMaterials.MOSS, new Item.Properties().stacksTo(1))
