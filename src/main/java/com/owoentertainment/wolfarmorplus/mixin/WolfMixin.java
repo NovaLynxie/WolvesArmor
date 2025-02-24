@@ -7,9 +7,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.owoentertainment.wolfarmorplus.item.WolfArmorItem;
-
 import net.minecraft.core.Holder;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.SimpleContainer;
@@ -20,7 +19,7 @@ import net.minecraft.world.entity.VariantHolder;
 import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.animal.WolfVariant;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorMaterials;
+import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -46,21 +45,30 @@ public abstract class WolfMixin extends TamableAnimal implements NeutralMob, Var
             if (this.isOwnedBy(player) && player.isCrouching()) {
                 // TODO Implement wolf inventory persistence
             }
-            if (item instanceof WolfArmorItem && this.isOwnedBy(player) && !this.hasArmor() && !this.isBaby()) {
-                this.setBodyArmorItem(itemStack.copyWithCount(1));
-                itemStack.consume(1, player);
-                cir.setReturnValue(InteractionResult.SUCCESS);
-            }
-            if (ArmorMaterials.ARMADILLO.value().repairIngredient().get().test(itemStack)
-                && this.getBodyArmorItem().getItem() instanceof WolfArmorItem    
-            ) {
-                cir.setReturnValue(InteractionResult.PASS);
+            if (this.hasArmor()) {
+                ItemStack armorStack = this.getBodyArmorItem();
+                if (this.isInSittingPose() && armorStack.isDamaged() && armorStack.getItem() instanceof AnimalArmorItem animalArmorItem) {
+                    if (animalArmorItem.getMaterial().value().repairIngredient().get().test(itemStack)) {
+                        itemStack.shrink(1);
+                        this.playSound(SoundEvents.WOLF_ARMOR_REPAIR);
+                        int repairValue = (int)((float)armorStack.getMaxDamage() * 0.125F);
+                        armorStack.setDamageValue(armorStack.getDamageValue() - repairValue);
+                    }
+                }
+            } else if (item instanceof AnimalArmorItem animalArmorItem) {
+                if (animalArmorItem.getBodyType() == AnimalArmorItem.BodyType.CANINE
+                    && !this.hasArmor() && !this.isBaby() && this.isOwnedBy(player)
+                ) {
+                    this.setBodyArmorItem(itemStack.copyWithCount(1));
+                    itemStack.consume(1, player);
+                    cir.setReturnValue(InteractionResult.SUCCESS);
+                }
             }
         }
     }
-    @Inject(method = "hasArmor", at = @At(value = "HEAD"), cancellable = true )
+    @Inject(method = "hasArmor", at = @At(value = "HEAD"), cancellable = true)
     private void hasArmor(CallbackInfoReturnable<Boolean> cir) {
-        if (this.getBodyArmorItem().getItem() instanceof WolfArmorItem) {
+        if (this.getBodyArmorItem().getItem() instanceof AnimalArmorItem) {
             cir.setReturnValue(true);
         }
     }
