@@ -1,5 +1,7 @@
 package com.owoentertainment.wolfarmorplus.inventory;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.player.Inventory;
@@ -27,7 +29,7 @@ public class WolfInventoryMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public ItemStack quickMoveStack(Player player, int slot) {
+    public ItemStack quickMoveStack(@Nonnull Player player, int slot) {
         ItemStack stack = ItemStack.EMPTY;
         //Slot wolfInvSlot = this.
 
@@ -36,7 +38,7 @@ public class WolfInventoryMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public boolean stillValid(Player player) {
+    public boolean stillValid(@Nonnull Player player) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'stillValid'");
     }

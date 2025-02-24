@@ -1,5 +1,7 @@
 package com.owoentertainment.wolfarmorplus.inventory;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
@@ -11,7 +13,7 @@ public class WolfInventoryScreen extends AbstractContainerScreen<WolfInventoryMe
     }
 
     @Override
-    protected void renderBg(GuiGraphics pGuiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
+    protected void renderBg(@Nonnull GuiGraphics pGuiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'renderBg'");
     }
