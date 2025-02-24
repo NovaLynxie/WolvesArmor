@@ -70,6 +70,8 @@ public abstract class WolfMixin extends TamableAnimal implements NeutralMob, Var
     private void hasArmor(CallbackInfoReturnable<Boolean> cir) {
         if (this.getBodyArmorItem().getItem() instanceof AnimalArmorItem) {
             cir.setReturnValue(true);
+        } else {
+            cir.setReturnValue(false);
         }
     }
 }
