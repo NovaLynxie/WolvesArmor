@@ -3,7 +3,6 @@ package com.owoentertainment.wolfarmorplus.registries;
 import com.owoentertainment.wolfarmorplus.WolfArmorPlus;
 import com.owoentertainment.wolfarmorplus.item.WolfArmorItem;
 
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -15,7 +14,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WolfArmorPlus.MOD_ID);
     
     // Custom mod items
-    public static final DeferredItem<Item> UPGRADE_BLUEPRINT = ITEMS.registerSimpleItem("upgrade_blueprint");
+    //public static final DeferredItem<Item> UPGRADE_BLUEPRINT = ITEMS.registerSimpleItem("upgrade_blueprint");
     
     // Custom wolf armors
     public static final DeferredItem<Item> BONE_WOLF_ARMOR = ITEMS.register("bone_wolf_armor", () -> new WolfArmorItem(
