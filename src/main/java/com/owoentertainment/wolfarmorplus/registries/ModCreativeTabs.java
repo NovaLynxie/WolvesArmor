@@ -16,7 +16,7 @@ public class ModCreativeTabs {
         .withTabsBefore(net.minecraft.world.item.CreativeModeTabs.COMBAT)
         .displayItems((parameters, output) -> {
             output.accept(ModItems.BONE_WOLF_ARMOR);
-            output.accept(ModItems.MOSSY_WOLF_ARMOR);
+            //output.accept(ModItems.MOSSY_WOLF_ARMOR);
             output.accept(ModItems.TURTLE_WOLF_ARMOR);
             output.accept(ModItems.CHAIN_WOLF_ARMOR);
             output.accept(ModItems.UPGRADE_BLUEPRINT);
