@@ -19,7 +19,7 @@ public class ModCreativeTabs {
             //output.accept(ModItems.MOSSY_WOLF_ARMOR);
             output.accept(ModItems.TURTLE_WOLF_ARMOR);
             output.accept(ModItems.CHAIN_WOLF_ARMOR);
-            output.accept(ModItems.UPGRADE_BLUEPRINT);
+            //output.accept(ModItems.UPGRADE_BLUEPRINT);
         }).build()
     );
     public static void registerCreativeTabs(IEventBus eventBus) {
