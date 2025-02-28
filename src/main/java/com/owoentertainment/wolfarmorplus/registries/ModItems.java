@@ -30,28 +30,6 @@ public class ModItems {
     public static final DeferredItem<Item> TURTLE_WOLF_ARMOR = ITEMS.register("turtle_wolf_armor", () -> new WolfArmorItem(
         ArmorMaterials.TURTLE, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(6)).stacksTo(1))
     );
-    /*
-    // copper wolf armor
-    public static final DeferredItem<Item> COPPER_WOLF_ARMOR = ITEMS.register("copper_wolf_armor", () -> new WolfArmorItem(
-        WolfArmorMaterials.COPPER, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(2)).stacksTo(1))
-    );
-    // vanilla metal armors (disabled)
-    public static final DeferredItem<Item> LEATHER_WOLF_ARMOR = ITEMS.register("leather_wolf_armor", () -> new WolfArmorItem(
-        ArmorMaterials.LEATHER, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(1)).stacksTo(1))
-    );
-    public static final DeferredItem<Item> IRON_WOLF_ARMOR = ITEMS.register("iron_wolf_armor", () -> new WolfArmorItem(
-        ArmorMaterials.IRON, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(5)).stacksTo(1))
-    );
-    public static final DeferredItem<Item> GOLD_WOLF_ARMOR = ITEMS.register("gold_wolf_armor", () -> new WolfArmorItem(
-        ArmorMaterials.GOLD, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(2)).stacksTo(1))
-    );
-    public static final DeferredItem<Item> DIAMOND_WOLF_ARMOR = ITEMS.register("diamond_wolf_armor", () -> new WolfArmorItem(
-        ArmorMaterials.DIAMOND, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(6)).stacksTo(1))
-    );
-    public static final DeferredItem<Item> NETHERITE_WOLF_ARMOR = ITEMS.register("netherite_wolf_armor", () -> new WolfArmorItem(
-        ArmorMaterials.NETHERITE, new Item.Properties().durability(ArmorItem.Type.BODY.getDurability(8)).stacksTo(1).fireResistant())
-    );
-    */
     public static void registerItems(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
