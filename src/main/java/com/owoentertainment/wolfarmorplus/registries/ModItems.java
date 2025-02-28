@@ -26,7 +26,7 @@ public class ModItems {
     );
     /* TODO Requires rework to function as unbreakable no protection armor!
     public static final DeferredItem<Item> MOSSY_WOLF_ARMOR = ITEMS.register("mossy_wolf_armor", () -> new WolfArmorItem(
-        WolfArmorMaterials.MOSS, 1)
+        WolfArmorMaterials.MOSS, 0)
     );
      */
     public static final DeferredItem<Item> TURTLE_WOLF_ARMOR = ITEMS.register("turtle_wolf_armor", () -> new WolfArmorItem(
