@@ -1,14 +1,7 @@
 {
     "itemGroup.wolfarmorplus": "Wolf Armour Plus",
     "item.minecraft.wolf_armor": "Armadillo Wolf Armour",
-    "item.wolfarmorplus.mossy_wolf_armor": "Mossy Wolf Armour",
+    "item.wolfarmorplus.mossy_wolf_armor": "Mossy Wolf Armour (WIP)",
     "item.wolfarmorplus.bone_wolf_armor": "Bone Wolf Armour",
-    "item.wolfarmorplus.turtle_wolf_armor": "Turtle Wolf Armour",
-    "item.wolfarmorplus.leather_wolf_armor": "Leather Wolf Armour",
-    "item.wolfarmorplus.copper_wolf_armor": "Copper Wolf Armour",
-    "item.wolfarmorplus.iron_wolf_armor": "Iron Wolf Armour",
-    "item.wolfarmorplus.chain_wolf_armor": "Chain Wolf Armour",
-    "item.wolfarmorplus.gold_wolf_armor": "Gold Wolf Armour",
-    "item.wolfarmorplus.diamond_wolf_armor": "Diamond Wolf Armour",
-    "item.wolfarmorplus.netherite_wolf_armor": "Netherite Wolf Armour"
+    "item.wolfarmorplus.turtle_wolf_armor": "Turtle Wolf Armour"
 }
